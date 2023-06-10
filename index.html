@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cmds do cleb1n</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fade-in-title 1s forwards;
+    }
+
+    @keyframes fade-in-title {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .avatar-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fade-in-avatar-container 1s forwards;
+    }
+
+    @keyframes fade-in-avatar-container {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+      opacity: 0;
+      animation: fade-in-avatar 1s forwards;
+    }
+
+    @keyframes fade-in-avatar {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .discord-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+      animation: fade-in-icon 1s forwards;
+      filter: invert(30%) sepia(100%) saturate(10000%) hue-rotate(240deg);
+
+    }
+
+    @keyframes fade-in-icon {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .separador {
+      width: 100%;
+      height: 1px;
+      background-color: #FFFFFF;
+      margin: 20px 0;
+    }
+
+    .comandos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .comando {
+      width: calc(25% - 20px);
+      margin: 10px;
+      background-color: #6200ff69;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 5px #0000FF;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .comando:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: linear-gradient(45deg, #0000FF, #6000FF);
+      filter: blur(10px);
+      opacity: 0.7;
+    }
+
+    .comando h2 {
+      margin-top: 0;
+      color: #FFFFFF;
+      font-size: 18px;
+      border-bottom: 1px solid #FFFFFF;
+      padding-bottom: 5px;
+    }
+
+    .comando p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="avatar-container">
+    <img class="avatar" src="avatar.png" alt="Avatar">
+    <h1>cmds do cleb1n</h1>
+  </div>
+
+  <a href="https://discord.com/invite/v98xW3a4cc" target="_blank">
+    <img class="discord-icon" src="data:image/png;base64,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" alt="Discord Icon">
+  </a>  
+  
+
+  <div class="separador"></div>
+  
+  <div class="comandos-container">
+    <div class="comando">
+      <h2>/help</h2>
+      <p>Mostra todos os comandos. (esse site)</p>
+    </div>
+  
+    <div class="comando">
+      <h2>/funcionando</h2>
+      <p>Diz que o bot está funcionando.</p>
+    </div>
+  
+    <div class="comando">
+      <h2>/bah</h2>
+      <p>Bah.</p>
+    </div>
+  
+    <div class="comando">
+      <h2>/apgr</h2>
+      <p>Apg msgs.</p>
+    </div>
+  
+    <div class="comando">
+      <h2>/dado</h2>
+      <p>Joga um dado de 1 a 6.</p>
+    </div>
+  
+    <div class="comando">
+      <h2>/dm</h2>
+      <p>Manda mensagem (dm) para alguém.</p>
+    </div>
+  </div>
+  
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const comandos = document.querySelectorAll('.comando');
+      const avatarContainer = document.querySelector('.avatar-container');
+      const discordIcon = document.querySelector('.discord-icon');
+
+      comandos.forEach((comando, index) => {
+        comando.style.animationDelay = `${(index + 1) * 120}ms`;
+      });
+
+      avatarContainer.style.animationDelay = '300ms';
+      discordIcon.style.animationDelay = '400ms';
+    });
+  </script>
+</body>
+</html>
